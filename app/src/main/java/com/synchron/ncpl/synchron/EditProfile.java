@@ -118,7 +118,6 @@ public class EditProfile extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
-        Toast.makeText(EditProfile.this,"haiiiiiiiiii", Toast.LENGTH_LONG).show();
         edit_fname = (EditText) findViewById(R.id.edit_fname);
         edit_profesion = (EditText) findViewById(R.id.edit_profile_proffesion);
         edit_location = (EditText) findViewById(R.id.edit_profile_location);
@@ -157,6 +156,7 @@ public class EditProfile extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
+
                 firstName = edit_fname.getText().toString();
                 proffesion = edit_profesion.getText().toString();
                 location = edit_location.getText().toString();
@@ -221,6 +221,7 @@ public class EditProfile extends AppCompatActivity
         });
     }
     private void selectImage() {
+        Toast.makeText(EditProfile.this,"haiiiiiiiiii", Toast.LENGTH_LONG).show();
         // Determine Uri of camera image to save.
         final File root = new File(Environment.getExternalStorageDirectory() + File.separator + "MyDir" + File.separator);
         root.mkdirs();
